@@ -1,0 +1,68 @@
+/* Intro Section */
+.intro-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Ensuring all text remains white */
+  background: url("/assets/mosque2.jpg") no-repeat center center/cover;
+  clip-path: ellipse(100% 80% at center top);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 11, 65, 0.5); /* Dark overlay */
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white; /* Ensuring text is white */
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white; /* Ensuring text is white */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  background-color: rgb(22, 22, 243);
+}
+
+.btn:hover {
+  background: rgb(15, 1, 80);
+  color: white; /* Ensuring text remains white */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 28px;
+    color: white; /* Ensuring text is white */
+  }
+
+  .content p {
+    font-size: 16px;
+    color: white; /* Ensuring text is white */
+  }
+}
