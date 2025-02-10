@@ -20,6 +20,7 @@ const IntroSection = () => {
         justifyContent: "center",
       }}
     >
+      
       {/* Transparency layer */}
       <div 
         className="overlay" 
@@ -42,6 +43,7 @@ const IntroSection = () => {
           maxWidth: "600px",
         }}
       >
+        <div style={{ height: "20px", width: "100%" }}></div>
         <h2 style={{ fontSize: "36px", marginBottom: "20px", color: "white" }}>
           Master Quran Reading Effortlessly
         </h2>
@@ -52,6 +54,7 @@ const IntroSection = () => {
         <p style={{ fontSize: "18px", lineHeight: "1.6", marginBottom: "20px", color: "white" }}>
           Learn at your own pace, build a strong foundation, and experience the beauty of reciting the Quran the way it’s meant to be.
         </p>
+        <div style={{ height: "10px", width: "100%" }}></div>
         <a 
           href="#" 
           className="btn" 
@@ -69,6 +72,8 @@ const IntroSection = () => {
         >
           Start Learning
         </a>
+        <div style={{ height: "70px", width: "100%" }}></div>
+
       </div>
     </section>
   );

@@ -5,6 +5,12 @@ import IntroSection from './components/intro/intro';
 import QuranLearningSection from './components/learning/learn';
 import TajweedSection from './components/tajweed/tajweed';
 import RecordResponseSection from './components/record/record';
+import QuranPilotSection from './components/steps/steps';
+import SubscriptionSection from './components/cta/cta';
+
+import QuranLearningModule from './components/quranlerning/quranlearning';
+
+
 function App() {
   return (
     <>
@@ -12,7 +18,11 @@ function App() {
       <IntroSection />
       <QuranLearningSection />
       <TajweedSection />
-      < RecordResponseSection/>
+      < RecordResponseSection />
+      < QuranPilotSection />
+      <SubscriptionSection />
+      <QuranLearningModule />
+
 
     </>
   );
