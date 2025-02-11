@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import teacherQuran from "../assets/withteacher.webp";
 import studentImage1 from "../assets/listeningonline.webp";
 import studentImage2 from "../assets/listeningonline2.webp";
@@ -9,7 +10,8 @@ import teacherStudentImage from "../assets/teaching1.webp";
 import quranImage from "../assets/Quran.webp"; // Replace with the actual path
 import "./ql.css";
 
-const QuranStudySection = () => {
+const QuranStudySection = () => { 
+  const navigate = useNavigate(); // Initialize navigate function
   return (
     <>
       <section className="study-section">
@@ -49,7 +51,7 @@ const QuranStudySection = () => {
           </div>
           <div className="quran-learning-text">
             <p>
-              This is a <a href="#">non-live</a> learning program. This means you
+              This is a <a href="/">non-live</a> learning program. This means you
               can learn whenever and wherever you wish (although we advise
               learning every single day for better retention). You are not
               constricted to sitting and concentrating in front of a teacher,
@@ -59,7 +61,7 @@ const QuranStudySection = () => {
               Unlike most other programs which simply ask you to go through their
               lessons, here at Quran Pilot, we also invest our time and energy to
               make sure you learn and succeed and can recite the Quran correctly.
-              We take time to <a href="#">listen to our students’ lesson recordings</a> 
+              We take time to <a href="/">listen to our students’ lesson recordings</a> 
               and provide feedback on everything they have done. We ask our students 
               to fix any issues before proceeding to the next lesson.
             </p>
@@ -69,7 +71,7 @@ const QuranStudySection = () => {
               cleared before moving forward.
             </p>
             <p>
-              Our <a href="#">qualified</a> teachers also provide valuable feedback explaining 
+              Our <a href="/">qualified</a> teachers also provide valuable feedback explaining 
               where you may have slipped up and what you should change in your mind and 
               tongue to fix it forever.
             </p>
@@ -155,48 +157,73 @@ const QuranStudySection = () => {
     </section>
 
 
+   
+
+
+
+
+ 
+
+ 
     <section className="how-to-start">
-         <div> <h2 >How to Start...</h2>
-          <p>
-            You can get started by joining Quran Pilot and learning from our instructional videos immediately.
-          </p>
-          </div>
+      <div>
+        <h2>How to Start...</h2>
+        <p>
+          You can get started by joining Quran Pilot and learning from our instructional videos immediately.
+        </p>
+      </div>
+
       <div className="start-container">
         <div className="start-text">
-         
-         
           <h3>Click The Button Below To Begin</h3>
           <p className="cost-info">
             The monthly cost to learn the Quran the right way, from the beginning, is <strong>£35</strong>
           </p>
           <h4>At Your Own Pace...</h4>
           <h2 className="quran-pilot">Quran Pilot From Zero</h2>
-          <button className="start-button">START LEARNING NOW</button>
-          
+
+          {/* Navigate to Signup Page */}
+          <button 
+            className="start-button"
+            onClick={() => navigate("/login")}
+          >
+            START LEARNING NOW
+          </button>
         </div>
+
         <div className="start-image">
           <h2>£35 Per Month</h2>
           <img src={quranImage} alt="Quran Book Illustration" />
         </div>
       </div>
+
       <p className="not-ready">
-            Not Ready Just Yet?{" "}
-            <a href="/free-lessons" className="free-lessons">
-              Learn Limited Lessons For <span>FREE</span> – Without Feedback
-            </a>
-          </p>
+        Not Ready Just Yet?{" "}
+        {/* Navigate to Free Lessons Page */}
+        <a 
+          href="/free-lessons" 
+          className="free-lessons"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/login");
+          }}
+        >
+          Learn Limited Lessons For <span>FREE</span> – Without Feedback
+        </a>
+      </p>
     </section>
+
     <footer className="footer">
       <div className="footer-container">
         {/* Footer Links */}
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Courses</a></li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
           </ul>
         </div>
 
@@ -204,10 +231,10 @@ const QuranStudySection = () => {
         <div className="footer-links">
           <h3>Support</h3>
           <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="/">FAQs</a></li>
+            <li><a href="/">Help Center</a></li>
+            <li><a href="/">Terms of Service</a></li>
+            <li><a href="/">Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -215,10 +242,10 @@ const QuranStudySection = () => {
         <div className="footer-social">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="/"><i className="fab fa-facebook"></i></a>
+            <a href="/"><i className="fab fa-twitter"></i></a>
+            <a href="/"><i className="fab fa-instagram"></i></a>
+            <a href="/"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>

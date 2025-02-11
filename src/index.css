@@ -1,29 +1,13 @@
-/* Apply Playfair Display Globally */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Playfair Display", serif;
+  font-family: "Noto Serif", serif;
+}
+body {
+  margin: 0;
+  font-family: "Noto Serif", serif;
 }
 
-/* Ensure all text elements use Playfair Display */
-html, body {
-    font-optical-sizing: auto;
-    font-weight: 400; /* Change as needed (400–900) */
-    font-style: normal;
-    background-color: white;
-    color: rgb(241, 234, 234);
-    height: 100%; /* Ensure the body takes full height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-}
-
-/* Specific styling for headings */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700; /* Adjust weight for headings */
-}
-
-p, a, span, button {
-    font-weight: 400;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

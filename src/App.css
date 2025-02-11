@@ -1,29 +1,29 @@
-/* Apply Playfair Display Globally */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Playfair Display", serif;
+/* App.css */
+
+/* Import the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+/* Define CSS variables for light and dark modes */
+:root {
+   font-family: "Noto Serif", serif;
+  --text-color: black; /* Light mode text color */
+  --background-color: white; /* Light mode background color */
+  --heading-color: black; /* Light mode heading color */
+  --paragraph-color: black; /* Light mode paragraph color */
 }
 
-/* Ensure all text elements use Playfair Display */
-html, body {
-    font-optical-sizing: auto;
-    font-weight: 400; /* Change as needed (400–900) */
-    font-style: normal;
-    background-color: white;
-    color: rgb(255, 243, 243);
-    height: 100%; /* Ensure the body takes full height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-/* Specific styling for headings */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700; /* Adjust weight for headings */
-}
-
-p, a, span, button {
-    font-weight: 400;
+/* Dark mode styles */
+body.dark-mode {
+  --text-color: white; /* Dark mode text color */
+  --background-color: black; /* Dark mode background color */
+  --heading-color: white; /* Dark mode heading color */
+  --paragraph-color: white; /* Dark mode paragraph color */
 }

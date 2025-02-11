@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./tajweed.css"
 import tajweed from '../assets/tajweed.webp'
+
+
+
 const TajweedSection = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+  
   return (
     <section className="tajweed-section">
       <div className="tajweed-container">
@@ -32,7 +38,7 @@ const TajweedSection = () => {
             sinful.
           </p>
           <br />
-          <button className="learn-btn">Learn For Free</button>
+          <button onClick={() => navigate("/login")} className="learn-btn">Learn For Free</button>
         </div>
       </div>
     </section>
